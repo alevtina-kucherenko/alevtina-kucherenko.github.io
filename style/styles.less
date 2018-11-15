@@ -1,0 +1,229 @@
+body {
+  margin: 0 auto;
+  //overflow: hidden;
+}
+
+//.background{
+//	background-image: url('../images/back-test.jpg');
+//	background-size: 100% 100vh;
+//    background-repeat: no-repeat;
+//    opacity: 0.3;
+//    height: 100vh;
+//    position: absolute;
+//    z-index: -1;
+//    width: 100%;
+//}
+.header {
+  font-size: 0;
+  width: 100%;
+
+  &__title {
+    font-weight: 300;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    color: #444649;
+    font-size: 50px;
+    line-height: 100px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__line {
+    width: 80%;
+    height: 1px;
+    background-color: #444649;
+    margin: 0 auto;
+  }
+}
+
+.layouts-container {
+  max-width: 940px;
+  margin: 40px auto 40px auto;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  animation-name: layouts;
+  animation-duration: .75s;
+  animation-delay: 0s;
+}
+
+.layouts {
+  //display: flex;
+  //justify-content: space-evenly;
+  //margin-top: 50px;
+}
+
+.layout-container {
+  //position: relative;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__elem {
+    width: 280px;
+    border-radius: 4px;
+    background-size: cover;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    transition: box-shadow .3s;
+
+    &_first {
+      height: 210px;
+      background-image: url('../images/1.jpg');
+    }
+    &_second {
+      height: 118px;
+      background-image: url('../images/2.png');
+    }
+    &_third {
+      height: 149px;
+      background-image: url('../images/3.jpg');
+    }
+    &_fourth {
+      height: 540px;
+      background-image: url('../images/4.png');
+    }
+    &_fifth {
+      height: 138px;
+      background-image: url('../images/5.png');
+    }
+    &_sixth {
+      height: 210px;
+      background-image: url('../images/6.jpg');
+    }
+  }
+
+  &__elem:hover {
+    box-shadow: none;
+  }
+
+  &-icons {
+    text-align: center;
+    margin-top: 8px;
+
+    &__elem {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+    }
+  }
+}
+
+@keyframes layouts {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// CUBE
+.cube-container {
+  height: 50px;
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  z-index: -1;
+
+  &.cube-container__first {
+    animation: movementFirstCube 30s infinite linear;
+  }
+
+  &.cube-container__second {
+    animation: movementSecondCube 30s infinite linear;
+  }
+
+  &.cube-container__third {
+    animation: movementThirdCube 30s infinite linear;
+  }
+}
+
+@keyframes movementFirstCube {
+  0% {
+    transform: translate(-300%, -300%);
+  }
+  50% {
+    transform: translate(300%, 300%);
+  }
+  100% {
+    transform: translate(-300%, -300%);
+  }
+}
+
+@keyframes movementSecondCube {
+  0% {
+    transform: translate(-300%, -300%);
+  }
+  50% {
+    transform: translate(300%, 300%);
+  }
+  100% {
+    transform: translate(-300%, -300%);
+  }
+}
+
+@keyframes movementThirdCube {
+  0% {
+    transform: translate(-300%, -300%);
+  }
+  50% {
+    transform: translate(300%, 300%);
+  }
+  100% {
+    transform: translate(-300%, -300%);
+  }
+}
+
+.cube {
+  transform-style: preserve-3d;
+  animation: rotate 30s infinite linear;
+
+  .front, .back, .right, .left, .bottom, .top {
+    position: absolute;
+    opacity: 0.4;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+  }
+
+  .front {
+    transform: translateZ(0px);
+  }
+
+  .back {
+    transform: translateZ(-50px);
+  }
+
+  .right {
+    transform: rotateY(-270deg) translateX(50px);
+    transform-origin: top right;
+  }
+
+  .left {
+    transform: rotateY(270deg) translateX(-50px);
+    transform-origin: center left;
+  }
+
+  .top {
+    transform: rotateX(270deg) translateY(0px);
+    transform-origin: top center;
+  }
+
+  .bottom {
+    transform: rotateX(270deg) translateY(50px);
+    transform-origin: bottom center;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
