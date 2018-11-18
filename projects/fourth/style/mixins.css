@@ -1,0 +1,16 @@
+.skills-bar-icon-styles {
+  width: 65px;
+  height: 65px;
+  border-radius: 35px;
+  color: white;
+  text-align: center;
+  line-height: 65px;
+  margin: 0 auto;
+}
+.form-area-styles {
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  background-color: #ddf3df;
+  outline: 0;
+}

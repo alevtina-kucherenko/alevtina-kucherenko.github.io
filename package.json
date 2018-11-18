@@ -1,0 +1,25 @@
+{
+  "name": "alevtina-kucherenko.github.io",
+  "version": "1.0.0",
+  "description": "alevtina-kucherenko.github.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/.bin/gulp -- watch",
+    "build": "node_modules/.bin/gulp -- compile-less"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alevtina-kucherenko/alevtina-kucherenko.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alevtina-kucherenko/alevtina-kucherenko.github.io/issues"
+  },
+  "homepage": "https://github.com/alevtina-kucherenko/alevtina-kucherenko.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^4.0.1"
+  }
+}
